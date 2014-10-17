@@ -2414,6 +2414,9 @@ class WhatsProt
                 case "contacts":
                     //TODO
                     break;
+                case "encrypt":
+                    //TODO
+                    break;
                 case "participant":
                     if ($node->hasChild('remove')) {
                         $this->eventManager()->fireGroupsParticipantsRemove(
