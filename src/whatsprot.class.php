@@ -883,6 +883,22 @@ class WhatsProt
 			), array($pricingNode), null);
 		$this->sendNode($node);
 	}
+	
+	/**
+	* Send a ping to the server
+	*/
+	public function sendPing()
+	{
+		$msgId = $this->createMsgId("ping_");
+		$pingNode = new ProtocolNode("ping", null, null, null);
+		$node = new ProtocolNode("iq", array(
+			"id" => $msgId,
+			"xmlns" => "w:p",
+			"type" => "get",
+			"to" => "s.whatsapp.net"
+			), array($pingNode), null);
+		$this->sendNode($node);
+	}
 
     /**
      * Get the current status message of a specific user.
