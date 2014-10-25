@@ -421,7 +421,7 @@ class WhatsProt
           echo "\nUp to date :)\n\n";
         }
         else{
-          $classesMD5 = file_get_contents('https://coderus.openrepos.net/whitesoft/whatsapp_classes');
+          $classesMD5 = trim(file_get_contents('https://coderus.openrepos.net/whitesoft/whatsapp_classes'));
 
           updateData('token.php', $WAver, $classesMD5);
           updateData('whatsprot.class.php', $WAver);
